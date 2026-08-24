@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+
+/* Features: */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 35px;
+  width: max-content;
+  animation: marqueeLeft 20s linear infinite;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* Categories: */
+#marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+#marquee-content {
+  display: flex;
+  gap: 35px;
+  width: max-content;
+  animation: marqueeRight 20s linear infinite;
+}
+
+#marquee-content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeRight {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
